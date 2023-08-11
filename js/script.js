@@ -57,7 +57,7 @@ const data = [{
         age: 25,
         location: "New York"
     },
-    // Add more data entries as needed
+
 ];
 
 const searchInput = document.getElementById("search-input");
@@ -70,7 +70,7 @@ const pageNumbersContainer = document.getElementById("page-numbers");
 let itemsPerPage = parseInt(entriesPerPageSelect.value, 10);
 let currentPage = 1;
 let totalPages = Math.ceil(data.length / itemsPerPage);
-let filteredData = data; // Initial data
+let filteredData = data;
 
 function renderTable() {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -128,7 +128,8 @@ searchInput.addEventListener("input", () => {
         item.location.toLowerCase().includes(searchText)
     );
 
-    currentPage = 1; // Reset page number when performing a search
+    // Reset page number when performing a search
+    currentPage = 1;
     totalPages = Math.ceil(filteredData.length / itemsPerPage);
     renderTable();
     updatePaginationButtons();
