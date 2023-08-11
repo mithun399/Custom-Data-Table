@@ -6,48 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Table with Search and Pagination</title>
 
-    <!-- Latest compiled and minified CSS -->
-
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-    <div class="input">
-        <input type="text" id="search-input" placeholder="Search...">
-    </div>
+    <div class="container">
+        <div class="top-controls">
+            <div id="show-entries">
+                Show
+                <select id="entries-per-page">
+                    <option value="2">2</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                </select> entries
+            </div>
 
-    <div id="show-entries" class="show">
-        Show
-        <select id="entries-per-page">
-            <option value="2">2</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-        </select> entries
-    </div>
-
-    <table id="custom-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data rows will be added here dynamically -->
-        </tbody>
-    </table>
-
-    <div id="pagination">
-        <button id="prev-page">Previous</button>
-        <div id="page-numbers">
-            <!-- Page numbers will be added here dynamically -->
+            <div class="input">
+                <input type="text" id="search-input" placeholder="Search...">
+            </div>
         </div>
-        <button id="next-page">Next</button>
+
+        <table id="custom-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data rows will be added here dynamically -->
+            </tbody>
+        </table>
+
+        <div id="pagination">
+            <button id="prev-page" class="btn" disabled>Previous</button>
+            <div id="page-numbers">
+                <!-- Page numbers will be added here dynamically -->
+            </div>
+            <button id="next-page" class="btn">Next</button>
+        </div>
     </div>
     <script src="js/script.js"></script>
-
 </body>
 
 </html>
