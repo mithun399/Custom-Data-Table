@@ -12,7 +12,7 @@ const data = [{
 
 
     {
-        name: "John Doe",
+        name: "Mon Doe",
         age: 25,
         location: "New York"
     },

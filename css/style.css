@@ -30,8 +30,10 @@ th {
 }
 
 .input {
+    left: 50% !important;
+    right: auto !important;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .show {
